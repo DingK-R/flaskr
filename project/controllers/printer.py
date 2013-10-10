@@ -13,7 +13,7 @@ def start():
 @app.route('/print', methods=['GET', 'POST'])
 def printer():
     form = CreateForm(request.form)
-    if request.method == 'POST' and from.validate():
+    if request.method == 'POST' and form.validate():
         from project.models.Printer import Printer
         printer = Printer()
         printer.show_string(form.text.data)
