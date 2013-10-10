@@ -3,5 +3,5 @@
 import os
 from project import app
 if __name__ == '__main__':
-    prot = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 8080))
     app.run('0.0.0.0', port=port)
